@@ -15,6 +15,17 @@ class TestGrid(unittest.TestCase):
             self.assertEqual(grid.x, d[0])
             self.assertEqual(grid.y, d[1])
 
+    def test_grid_init_wrong_data(self):
+        data = [
+            ('x', 'y'),
+            ('L', 'M'),
+            ('[]', '{}')
+        ]
+
+        for d in data:
+            with self.assertRaises(ValueError):
+                Grid(*d)
+
 
 if __name__ == '__main__':
     unittest.main()

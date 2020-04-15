@@ -17,7 +17,7 @@ class TestInputParser(unittest.TestCase):
 
         grid_dimensions, instructions = InputParser(i).parse()
 
-        self.assertEqual(grid_dimensions, (5, 5))
+        self.assertEqual(grid_dimensions, ('5', '5'))
         self.assertEqual(instructions_data, instructions)
 
 
